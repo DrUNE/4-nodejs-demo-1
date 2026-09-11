@@ -1,4 +1,4 @@
-const { characters, stealRing } = require("./caracters");
+const { characters, stealRing } = require('./caracters');
 
 console.log(characters);
-console.log(stealRing("Bilbo"));
+console.log(stealRing('Bilbo'));

@@ -1,7 +1,7 @@
-const { add } = require("./add");
-const { multiply } = require("./multiply");
-const { subtract } = require("./subtract");
-const { divide } = require("./divide");
+const { add } = require('./add');
+const { multiply } = require('./multiply');
+const { subtract } = require('./subtract');
+const { divide } = require('./divide');
 
 const [, , a, b, operation] = process.argv;
 

@@ -1,3 +1,3 @@
-export const some = "hehe";
+export const some = 'hehe';
 
-export default "hoho";
+export default 'hoho';

@@ -1,6 +1,6 @@
-const characters = [{ name: "Frodo" }, { name: "Bilbo" }];
+const characters = [{ name: 'Frodo' }, { name: 'Bilbo' }];
 
-let hasRingName = "Gorlum";
+let hasRingName = 'Gorlum';
 
 function stealRing(newOwner) {
   return characters.find((character) => character.name === newOwner)

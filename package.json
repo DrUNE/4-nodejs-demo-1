@@ -2,25 +2,31 @@
   "name": "4-nodejs-demo-1",
   "version": "1.0.0",
   "description": "[Все курсы на PurpleSchool](https://purpleschool.ru/)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [],
+  "homepage": "https://github.com/DrUNE/4-nodejs-demo-1#readme",
+  "bugs": {
+    "url": "https://github.com/DrUNE/4-nodejs-demo-1/issues"
   },
+  "license": "ISC",
+  "author": "Andrey Litvinov",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DrUNE/4-nodejs-demo-1.git"
   },
-  "keywords": [],
-  "author": "Andrey Litvinov",
-  "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/DrUNE/4-nodejs-demo-1/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
-  "homepage": "https://github.com/DrUNE/4-nodejs-demo-1#readme",
   "devDependencies": {
     "@types/node": "^26.5.0",
     "oxfmt": "^0.67.0",
-    "oxlint": "^1.82.0"
+    "oxlint": "^1.82.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "typescript": "^7.0.2"
   }
 }
