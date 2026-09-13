@@ -1,8 +1,6 @@
-const perf_hooks = require('perf_hooks');
+import { performance, timerify, PerformanceObserver } from 'node:perf_hooks';
 
-test = perf_hooks.performance.timerify(test);
-
-const performanceObserver = new perf_hooks.PerformanceObserver((items, observer) => {
+const performanceObserver = new PerformanceObserver((items, observer) => {
   console.log(items.getEntries());
   const entry = items.getEntriesByName('slow').pop();
   console.log(`${entry.name}: ${entry.duration}`);
@@ -28,4 +26,4 @@ function slow() {
 }
 
 slow();
-test();
+timerify(test)();
