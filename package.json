@@ -13,8 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/DrUNE/4-nodejs-demo-1.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
+  "imports": {
+    "#/*": "./src/*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "oxlint",

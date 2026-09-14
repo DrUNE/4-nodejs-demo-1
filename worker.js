@@ -1,4 +1,4 @@
-const { Worker } = require('worker_threads');
+import { Worker } from 'node:worker_threads';
 
 const compute = (array) => {
   return new Promise((resolve, reject) => {
@@ -38,4 +38,4 @@ const run = async () => {
   console.log(performance.getEntriesByName('slow').pop());
 };
 
-run();
+await run();

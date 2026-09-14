@@ -1,4 +1,4 @@
-const factorial = require('./worker/factorial.js');
+import { factorial } from './worker/factorial.js';
 const compute = (array) => {
   const arr = [];
   for (let i = 0; i < 100000000; i++) {
@@ -22,4 +22,4 @@ const run = async () => {
   console.log(performance.getEntriesByName('slow').pop());
 };
 
-run();
+await run();

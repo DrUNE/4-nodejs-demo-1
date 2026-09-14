@@ -1,5 +1,5 @@
-const { parentPort, workerData } = require('worker_threads');
-const factorial = require('./worker/factorial.js');
+import { parentPort, workerData } from 'node:worker_threads';
+import { factorial } from './worker/factorial.js';
 
 const compute = ({ array }) => {
   const arr = [];
@@ -8,7 +8,5 @@ const compute = ({ array }) => {
   }
   return array.map((el) => factorial(el));
 };
-
-compute(workerData);
 
 parentPort.postMessage(compute(workerData));

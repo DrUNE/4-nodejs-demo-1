@@ -1,4 +1,5 @@
 import { performance, timerify, PerformanceObserver } from 'node:perf_hooks';
+import { some } from '#/some.ts';
 
 const performanceObserver = new PerformanceObserver((items, observer) => {
   console.log(items.getEntries());
@@ -27,3 +28,4 @@ function slow() {
 
 slow();
 timerify(test)();
+console.log(some('Андрей'));
