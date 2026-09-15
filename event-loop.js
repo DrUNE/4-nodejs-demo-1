@@ -26,7 +26,7 @@ setTimeout(() => {
   console.log(performance.now(), 'Timeout 1000');
 }, 1000);
 
-Promise.resolve().then(() => {
+await Promise.resolve().then(() => {
   console.log('Promise');
 });
 

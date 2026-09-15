@@ -1,4 +1,4 @@
-const { parentPort, workerData } = require('worker_threads');
-const { compute } = require('./factorial');
+import { isMainThread, parentPort, workerData } from 'node:worker_threads';
+import { compute } from './factorial.js';
 
-parentPort.postMessage(compute(workerData));
+if (!isMainThread) parentPort.postMessage(compute(workerData));
