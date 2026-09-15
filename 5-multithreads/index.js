@@ -1,5 +1,8 @@
 import { performance as pm, PerformanceObserver } from 'node:perf_hooks';
 import { Worker } from 'node:worker_threads';
+import os from 'node:os';
+
+import { countDivisible } from './countDivisible.js';
 
 function chunkArray(arr, size) {
   const result = [];
@@ -10,7 +13,7 @@ function chunkArray(arr, size) {
 }
 
 const TOTAL_NUMBERS = 300_000;
-const CHUNK_SIZE = 50_000;
+const CHUNK_SIZE = Math.ceil(TOTAL_NUMBERS / os.cpus().length);
 const NUMBERS_ARRAY = Array.from({ length: TOTAL_NUMBERS });
 for (let i = 0; i < TOTAL_NUMBERS; i++) {
   NUMBERS_ARRAY[i] = i;
@@ -53,6 +56,10 @@ const workerFun = async (array, size) => {
 };
 
 await (async () => {
-  await workerFun(NUMBERS_ARRAY, TOTAL_NUMBERS);
+  pm.mark(`countDivisible.start`);
+  countDivisible({ divisor: 3, array: NUMBERS_ARRAY });
+  pm.mark(`countDivisible.end`);
+  pm.measure('countDivisible', `countDivisible.start`, `countDivisible.end`);
+
   await workerFun(NUMBERS_ARRAY, CHUNK_SIZE);
 })();
