@@ -1,0 +1,23 @@
+{
+  "name": "drune-timer-notifications",
+  "version": "1.0.0",
+  "description": "ДЗ по работе с NPM",
+  "homepage": "https://github.com/DrUNE/4-nodejs-demo-1#readme",
+  "bugs": {
+    "url": "https://github.com/DrUNE/4-nodejs-demo-1/issues"
+  },
+  "license": "ISC",
+  "author": "Andrey Litvinov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrUNE/4-nodejs-demo-1.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
