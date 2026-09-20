@@ -26,7 +26,9 @@ function durationToMs(str) {
   return totalMs;
 }
 
-setTimeout(
-  () => nn.notify({ title: 'Timer notification', message: 'Время истекло!' }),
-  durationToMs(args.join(' ')),
-);
+const duration = durationToMs(args.join(' '));
+if (duration)
+  setTimeout(
+    () => nn.notify({ title: 'Timer notification', message: 'Время истекло!', sound: true }),
+    duration,
+  );
