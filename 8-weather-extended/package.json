@@ -1,0 +1,33 @@
+{
+  "name": "drune-weather-cli",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node weather.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "weather"
+  ],
+  "author": "Anton Larichev",
+  "license": "ISC",
+  "homepage": "https://purpleschool.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://purpleschool.ru"
+  },
+  "bugs": {
+    "url": "https://purpleschool.ru",
+    "email": "antonlarichev@gmail.com"
+  },
+  "dependencies": {
+    "chalk": "6.0.0",
+    "dedent-js": "^1.0.1"
+  }
+}
