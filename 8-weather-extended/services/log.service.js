@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import dd from 'dedent-js';
+import { t } from './lang.service.js';
 
 const printError = (error) => {
   console.log(chalk.bgRed(' ERROR ') + ' ' + error);
@@ -10,25 +10,11 @@ const printSuccess = (message) => {
 };
 
 const printHelp = () => {
-  console.log(
-    dd`${chalk.bgCyan(' HELP ')}
-		Без параметров - вывод погоды
-		-s [CITY] для установки города
-		-h для вывода помощи
-		-t [API_KEY] для сохранения токена
-		`
-  );
+  console.log(t().printHelp());
 };
 
 const printWeather = (res, icon) => {
-  console.log(
-    dd`${chalk.bgYellow(' WEATHER ')} Погода в городе ${res.location.name}
-		${icon}  ${res.current.condition.text}
-		Температура: ${res.current.temp_c} ℃ (ощущается как ${res.current.feelslike_c} ℃)
-		Влажность: ${res.current.humidity}%
-		Скорость ветра: ${(res.current.wind_kph * 1000 / 3600).toFixed(2)} м/с
-		`
-  );
+  console.log(t().printWeather(res, icon));
 };
 
 export { printError, printSuccess, printHelp, printWeather };
