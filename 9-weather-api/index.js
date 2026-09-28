@@ -18,7 +18,7 @@ app.get('/weather', async (req, res) => {
   return res.json(weatherList);
 });
 
-app.use((err, req, res) => {
+app.use((err, _req, res, _next) => {
   console.log(err.message);
   return res.status(503).json({
     error: 'External weather service temporarily unavailable',

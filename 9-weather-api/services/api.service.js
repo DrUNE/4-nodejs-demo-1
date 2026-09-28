@@ -41,7 +41,6 @@ const getWeather = async (...cityList) => {
         lang: getCurrentLang(),
       });
       const url = `${weatherApiUrl}?${params}`;
-      console.log(url);
       return fetch(url);
     }),
   );
