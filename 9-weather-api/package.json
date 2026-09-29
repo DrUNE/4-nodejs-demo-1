@@ -1,0 +1,28 @@
+{
+  "name": "9-weather-api",
+  "version": "1.0.0",
+  "description": "API for current weather in City",
+  "keywords": [
+    "api",
+    "demo",
+    "express",
+    "weather"
+  ],
+  "license": "ISC",
+  "author": "Andrey Litvinov",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^6.0.1",
+    "dedent-js": "^1.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2"
+  }
+}
