@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2024",
+    "lib": [
+      "ES2024"
+    ],
+    "types": [
+      "node"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "tsc-alias": {
+    "resolveFullPaths": true
+  }
+}

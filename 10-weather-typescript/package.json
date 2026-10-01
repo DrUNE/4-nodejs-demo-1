@@ -1,0 +1,48 @@
+{
+  "name": "drune-weather-cli",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "bin": {
+    "weather": "./dist/index.js"
+  },
+  "folders": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "weather"
+  ],
+  "author": "Andrey Litvinov",
+  "license": "ISC",
+  "homepage": "https://purpleschool.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrUNE/4-nodejs-demo-1"
+  },
+  "bugs": {
+    "url": "https://github.com/DrUNE/4-nodejs-demo-1",
+    "email": "drune.email@gmail.com"
+  },
+  "dependencies": {
+    "chalk": "6.0.0",
+    "dedent-js": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "tsc-alias": "^1.9.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
